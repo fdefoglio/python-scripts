@@ -51,9 +51,6 @@ def main():
 
     print(f"📖 Found {len(students)} student(s) in {input_file}")
     
-    # Month is usually the same for a batch, so ask once
-    new_month = input("📅 Billing Month (e.g., April 2026): ").strip()
-
     csv_header = "Name,Month,Customer ID,E-mail,Invoice #"
 
     for data in students:
@@ -62,6 +59,9 @@ def main():
 
         # Per-student prompts
         print(f"\n👤 Processing: {student_name} ({parent_name})")
+        
+        # MOVED INSIDE THE LOOP: Now it asks for the period per student
+        new_month = input(f"📅 Billing Period/Week for {student_name} (e.g., Week 14 / April 2026): ").strip()
         new_invoice = input(f"🧾 Invoice # for {student_name}: ").strip()
         new_lessons = input(f"🎸 Lessons for {student_name}: ").strip()
 
