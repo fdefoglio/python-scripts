@@ -107,6 +107,8 @@ Vriendelike groete / <i>Kind regards</i>'''
         output_content = (
             f"```tsv\n{tsv}\n```\n\n"
             f"```csv\n{csv_header}\n{csv_row}\n```\n\n"
+            f"```tsv\n{tsv}\n```\n\n"
+            f"```csv\n{csv_header}\n{csv_row}\n```\n\n"
             f"```text\nSubject line: {subject}\n```\n\n"
             f"```text\n{email_body}\n```"
         )
